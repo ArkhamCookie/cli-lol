@@ -7,7 +7,7 @@ import (
 func Profile(idtype string, id string) (target string) {
 	switch idtype {
 	case "email":
-		fmt.Printf("%s is an email.\n", idtype)
+		fmt.Printf("%s is an email.\n", id)
 		target := "/account/" + id
 		return target
 	default:
