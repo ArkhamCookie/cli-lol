@@ -1,13 +1,19 @@
 package http
 
 import (
+	"errors"
 	"fmt"
 	"io"
 	"log"
 	"net/http"
 )
 
-func Get(url string) {
+func Get(url string) (error) {
+	// If no url was given, return an error (with a message).
+	if url == "" {
+		return errors.New("no address given")
+	}
+
 	resp, err := http.Get(url)
 
 	if err != nil {
@@ -23,4 +29,5 @@ func Get(url string) {
 	}
 
 	fmt.Println(string(body))
+	return nil
 }
