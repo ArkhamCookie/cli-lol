@@ -2,17 +2,16 @@ package http
 
 import (
 	"errors"
-	"fmt"
 	"io"
 	"log"
 	"net/http"
 )
 
 // TODO: return http status codes
-func Get(url string) (error) {
+func Get(url string) (response string, err error) {
 	// If no url was given, return an error (with a message).
 	if url == "" {
-		return errors.New("no address given")
+		return "", errors.New("no address given")
 	}
 
 	resp, err := http.Get(url)
@@ -33,6 +32,6 @@ func Get(url string) (error) {
 		log.Fatal(err)
 	}
 
-	fmt.Println(string(body))
-	return nil
+	// fmt.Println(string(body))
+	return string(body), nil
 }
