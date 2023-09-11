@@ -6,8 +6,8 @@ import (
 	"internal/http"
 )
 
-// Address checks the availability of a given address.
-func Address(address string) error {
+// Check the availability of a given address.
+func Available(address string) error {
 	// If no address was given, return an error (with a message).
 	if address == "" {
 		return errors.New("no address given")

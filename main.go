@@ -12,6 +12,9 @@ func main() {
 	fmt.Println("cli.lol")
 
 	// http.Get("https://api.omg.lol/address/arkhamcookie/statuses/648d5e756cc10")
-	// cmd.Statuslog()
+
+	// address.Available("arkhamcookie")
 	// profile.Profile("email", "omg-lol@mail.arkhamcookie.com")
+
+	// cmd.Statuslog()
 }
