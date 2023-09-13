@@ -7,7 +7,6 @@ import (
 	"net/http"
 )
 
-// TODO: return http status codes
 func Get(url string) (response string, err error) {
 	// If no url was given, return an error (with a message).
 	if url == "" {
@@ -30,6 +29,11 @@ func Get(url string) (response string, err error) {
 	// print it to console & exit program.
 	if err != nil {
 		log.Fatal(err)
+	}
+
+	if (resp.StatusCode != 200) {
+		// TODO: respond differently depending on error
+		return resp.Status, errors.New("request failed")
 	}
 
 	// fmt.Println(string(body))
