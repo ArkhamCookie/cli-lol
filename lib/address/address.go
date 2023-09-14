@@ -21,6 +21,7 @@ func Available(address string) (string, error) {
 	}
 
 	// ? Handle differently if encoding is required?
+	// TODO: Return bool instead of response
 	return string(response), nil
 }
 
