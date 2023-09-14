@@ -15,14 +15,14 @@ func Available(address string) (string, error) {
 	}
 
 	target := fmt.Sprintf("https://api.omg.lol/address/%s/availability", address)
-	response, err := http.Get(target)
+	resp, err := http.Get(target)
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	// ? Handle differently if encoding is required?
 	// TODO: Return bool instead of response
-	return string(response), nil
+	return string(resp), nil
 }
 
 // Get the expiration date for an address
@@ -33,10 +33,10 @@ func Expiration(address string) (string, error) {
 	}
 
 	target := fmt.Sprintf("https://api.omg.lol/address/%s/expiration", address)
-	response, err := http.Get(target)
+	resp, err := http.Get(target)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	return string(response), nil
+	return string(resp), nil
 }
