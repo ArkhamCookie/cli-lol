@@ -7,7 +7,7 @@ import (
 	"net/http"
 )
 
-func Get(url string) (response string, err error) {
+func Get(url string) (string, error) {
 	// If no url was given, return an error (with a message).
 	if url == "" {
 		return "", errors.New("no address given")
