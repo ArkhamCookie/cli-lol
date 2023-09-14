@@ -23,3 +23,19 @@ func Available(address string) (string, error) {
 	// ? Handle differently if encoding is required?
 	return string(response), nil
 }
+
+// Get the expiration date for an address
+func Expiration(address string) (string, error) {
+	// If no address was given, return an error (with a message).
+	if address == "" {
+		return "", errors.New("no address given")
+	}
+
+	target := fmt.Sprintf("https://api.omg.lol/address/%s/expiration", address)
+	response, err := http.Get(target)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	return string(response), nil
+}
