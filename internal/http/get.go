@@ -30,6 +30,5 @@ func Get(url string) (string, error) {
 		return resp.Status, errors.New("request failed")
 	}
 
-	// fmt.Println(string(body))
 	return string(body), nil
 }
