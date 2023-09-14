@@ -14,9 +14,6 @@ func Get(url string) (string, error) {
 	}
 
 	resp, err := http.Get(url)
-
-	// If an error was returned,
-	// print it to console & exit program.
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -24,9 +21,6 @@ func Get(url string) (string, error) {
 	defer resp.Body.Close()
 
 	body, err := io.ReadAll(resp.Body)
-
-	// If an error was returned,
-	// print it to console & exit program.
 	if err != nil {
 		log.Fatal(err)
 	}
