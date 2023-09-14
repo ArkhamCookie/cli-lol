@@ -4,17 +4,22 @@ import (
 	"errors"
 	"fmt"
 	"internal/http"
+	"log"
 )
 
 // Check the availability of a given address.
-func Available(address string) error {
+func Available(address string) (string, error) {
 	// If no address was given, return an error (with a message).
 	if address == "" {
-		return errors.New("no address given")
+		return "", errors.New("no address given")
 	}
 
 	target := fmt.Sprintf("https://api.omg.lol/address/%s/availability", address)
-	http.Get(target)
+	response, err := http.Get(target)
+	if err != nil {
+		log.Fatal(err)
+	}
 
-	return nil
+	// ? Handle differently if encoding is required?
+	return string(response), nil
 }
