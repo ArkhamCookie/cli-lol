@@ -7,13 +7,28 @@ import (
 	"net/http"
 )
 
+type GetStruct struct {
+	request struct {
+		statusCode int
+		success bool
+	}
+	response struct{}
+}
+
 func Get(url string) (string, error) {
 	// If no url was given, return an error (with a message).
 	if url == "" {
 		return "", errors.New("no address given")
 	}
 
-	resp, err := http.Get(url)
+	req, err := http.NewRequest(http.MethodGet, url, nil)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	req.Header.Set("Content-Type", "application/json; charset=utf-8")
+
+	resp, err := http.DefaultClient.Do(req)
 	if err != nil {
 		log.Fatal(err)
 	}
