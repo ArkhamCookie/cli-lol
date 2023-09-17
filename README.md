@@ -11,7 +11,7 @@ A command line interface to [omg.lol](https://omg.lol)'s API.
 
 ### Credits
 
-- [**Neaknik**](https://neatnik.net)
+- [Neaknik](https://neatnik.net)
   \- created/owns [omg.lol](https://omg.lol)
 
 ### Libraries Used
