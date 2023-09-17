@@ -21,6 +21,8 @@ A command line interface to [omg.lol](https://omg.lol)'s API.
 
 ### Other omg.lol Related Projects
 
+- [rknightuk's now page API](https://github.com/rknightuk/api)
+
 #### Command Line Interfaces
 
 - [omglolcli](https://github.com/rknightuk/omglolcli)
