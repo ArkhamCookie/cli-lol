@@ -8,7 +8,7 @@ A command line interface to [omg.lol](https://omg.lol)'s API.
 
 ### Credits
 
-- [**neaknik**](https://neatnik.net) for creating [omg.lol](https://omg.lol)
+- [**Neaknik**](https://neatnik.net) for creating [omg.lol](https://omg.lol)
 
 ### Similar Projects
 
