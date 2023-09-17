@@ -14,6 +14,11 @@ A command line interface to [omg.lol](https://omg.lol)'s API.
 - [**Neaknik**](https://neatnik.net)
   for creating [omg.lol](https://omg.lol)
 
+### Libraries Used
+
+- [Cobra](https://cobra.dev)
+  \- A Framework for Modern CLI Apps in Go
+
 ### Similar Projects
 
 - [omglol-client-go](https://github.com/ejstreet/omglol-client-go)
