@@ -36,3 +36,5 @@ A command line interface to [omg.lol](https://omg.lol)'s API.
   \- An api wrapper for the omg.lol api
 - [omg-api](https://github.com/supleed2/omg-api)
   \- Crate for interacting with the omg.lol API
+- [omglolrs](https://sr.ht/~gpo/omglolrs)
+  \-An asynchronous Rust wrapper for the omg.lol API by Gil
