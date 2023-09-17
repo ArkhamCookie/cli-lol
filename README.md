@@ -1,9 +1,13 @@
 # cli.lol
 
-A command line interface to [omg.lol](https://omg.lol)'s API.
+A command-line interface for [omg.lol](https://omg.lol)'s API.
 
 > **Warning**
 > The omg.lol API is still in development, and endpoints are subject to change. This may cause the client to break unexpectedly.
+
+## License
+
+`cli.lol` is licensed under the [AGPL-3.0](/LICENSE).
 
 ---
 
