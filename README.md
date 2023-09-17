@@ -12,7 +12,7 @@ A command line interface to [omg.lol](https://omg.lol)'s API.
 ### Credits
 
 - [**Neaknik**](https://neatnik.net)
-  for creating [omg.lol](https://omg.lol)
+  \- created/owns [omg.lol](https://omg.lol)
 
 ### Libraries Used
 
@@ -21,7 +21,8 @@ A command line interface to [omg.lol](https://omg.lol)'s API.
 
 ### Other omg.lol Related Projects
 
-- [rknightuk's now page API](https://github.com/rknightuk/api)
+- [rknightuk/api](https://github.com/rknightuk/api)
+  \- rknight's [now page](https://nownownow.com/about) API
 
 #### Command Line Interfaces
 
