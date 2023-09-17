@@ -19,16 +19,16 @@ A command line interface to [omg.lol](https://omg.lol)'s API.
 - [Cobra](https://cobra.dev)
   \- A Framework for Modern CLI Apps in Go
 
-### Similar Projects
+### Other omg.lol Related Projects
 
-#### omg.lol Command Line Interfaces
+#### Command Line Interfaces
 
 - [omglolcli](https://github.com/rknightuk/omglolcli)
   \- An omg.lol CLI [written in JavaScript]
 - [omg-rs](https://github.com/supleed2/omg-rs)
   \- CLI app for interacting with the omg.lol API
 
-#### omg.lol API Clients
+#### API Clients
 
 - [omglol-client-go](https://github.com/ejstreet/omglol-client-go)
   \- An API client for omg.lol written in Go
