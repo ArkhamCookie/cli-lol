@@ -26,10 +26,10 @@
 
 ### GitHub Community Tools
 
-- [ ] Code of Conduct
-- [ ] Security Policy
+- [x] Code of Conduct
+- [x] Security Policy
 - [ ] Contributing
-- [ ] Funding
+- [x] Funding
 
 #### [Templates](https://github.com/devspace/awesome-github-templates)
 
