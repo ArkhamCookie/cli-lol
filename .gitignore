@@ -1,4 +1,20 @@
+# Arkham's golang .gitignore
+# https://arkhamcookie.com
+
+## golang
 *.test
-tmp
-docs/postman
 *.sum
+
+## cache
+.trash
+.DS_Store
+*.bak
+
+## output
+out/
+cli-lol # your binary
+
+## configs
+.vscode
+.idea
+.vim
