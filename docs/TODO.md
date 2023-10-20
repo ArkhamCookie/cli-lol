@@ -18,6 +18,7 @@
   - [ ] Finish v1 of todo list
 - [x] Add postman files
   - [ ] Use a [gitmodule](https://git-scm.com/docs/gitmodules) to keep `/docs/api/postman/` up to date (?)
+- [ ] Project layout docs (?)
   
 ### Usage Docs
 
