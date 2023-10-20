@@ -1,0 +1,309 @@
+{
+	"info": {
+		"_postman_id": "eebc84dc-f2eb-470b-a583-177f523a93c6",
+		"name": "Now Page",
+		"description": "Manage your /now page.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12532425"
+	},
+	"item": [
+		{
+			"name": "Retrieve /now Page",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{base_url}}/address/:address/now",
+					"protocol": "https",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"address",
+						":address",
+						"now"
+					],
+					"variable": [
+						{
+							"key": "address",
+							"value": "foobar"
+						}
+					]
+				},
+				"description": "Retrieve the now page for an address."
+			},
+			"response": [
+				{
+					"name": "Retrieve /now Page",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{base_url}}/address/:address/now",
+							"protocol": "https",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"address",
+								":address",
+								"now"
+							],
+							"variable": [
+								{
+									"key": "address",
+									"value": "foobar"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 22 Jan 2023 05:10:48 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,POST,OPTIONS,DELETE,PUT,PATCH"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Authorization,Content-Type"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1558"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"request\": {\n        \"status_code\": 200,\n        \"success\": true\n    },\n    \"response\": {\n        \"message\": \"Here’s the Now Page for @foobar.\",\n        \"now\": {\n            \"content\": \"/* This is a sample /now page — edit it and make it your own! */\\r\\n\\r\\n{profile-picture}\\r\\n\\r\\n# {address} // you can change this to your name!\\r\\n\\r\\n## My /now page\\r\\n\\r\\n--- Now ---\\r\\n\\r\\n(This is a [now page](https://nownownow.com/about), and if you have your own site, [you should make one](https://nownownow.com/about), too.)\\r\\n\\r\\n### What I’m reading\\r\\n\\r\\n- [Wuthering Heights](https://en.wikipedia.org/wiki/Wuthering_Heights) by [Emily Brontë ](https://en.wikipedia.org/wiki/Emily_Brontë) {book}\\r\\n- [Monocole](https://monocle.com) {book}\\r\\n\\r\\n### What I’m watching\\r\\n\\r\\n- [The Jeffersons](https://en.wikipedia.org/wiki/The_Jeffersons) {display}\\r\\n- [Coronation Street](https://en.wikipedia.org/wiki/Coronation_Street) {display}\\r\\n\\r\\n### What I’m making\\r\\n\\r\\n- [Sourdough bread](https://www.feastingathome.com/sourdough-bread/) {bread-slice}\\r\\n- [Socks](https://www.yarnspirations.com/bernat-family-knit-work-socks/BRK0328-001994M.html?cgid=patterns) {socks}\\r\\n\\r\\n### What I’m enjoying\\r\\n\\r\\n- Time with friends and family {people-roof}\\r\\n- Planning for my upcoming trip {plane}\\r\\n\\r\\n---\\r\\n\\r\\n{last-updated}\\r\\n\\r\\n[Back to my omg.lol page!](https://{address}.omg.lol)\",\n            \"updated\": \"1674364245\",\n            \"listed\": \"1\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Retrieve the now.garden listing",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{base_url}}/now/garden",
+					"protocol": "https",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"now",
+						"garden"
+					]
+				},
+				"description": "Retrieve all listed /now pages."
+			},
+			"response": [
+				{
+					"name": "Retrieve the now.garden listing",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{base_url}}/now/garden",
+							"protocol": "https",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"now",
+								"garden"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 17 Jan 2023 04:44:15 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,POST,OPTIONS,DELETE,PUT,PATCH"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Authorization,Content-Type"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"request\": {\n        \"status_code\": 200,\n        \"success\": true\n    },\n    \"response\": {\n        \"message\": \"Here are all of the /now pages in the Now Garden.\",\n        \"garden\": [\n            {\n                \"address\": \"drudge\",\n                \"url\": \"https://penree.com/now\",\n                \"updated\": {\n                    \"unix_epoch_time\": \"1673929294\",\n                    \"iso_8601_time\": \"2023-01-17T04:21:34+00:00\",\n                    \"rfc_2822_time\": \"Tue, 17 Jan 2023 04:21:34 +0000\",\n                    \"relative_time\": \"22 minutes and 41 seconds ago\"\n                }\n            },\n            ...\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update /now Page",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{api_key}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"content\": \"/* This is a sample /now page — edit it and make it your own! */\\r\\n\\r\\n{profile-picture}\\r\\n\\r\\n# {address} // you can change this to your name!\\r\\n\\r\\n## My /now page\\r\\n\\r\\n--- Now ---\\r\\n\\r\\n(This is a [now page](https://nownownow.com/about), and if you have your own site, [you should make one](https://nownownow.com/about), too.)\\r\\n\\r\\n### What I’m reading\\r\\n\\r\\n- [Wuthering Heights](https://en.wikipedia.org/wiki/Wuthering_Heights) by [Emily Brontë ](https://en.wikipedia.org/wiki/Emily_Brontë) {book}\\r\\n- [Monocole](https://monocle.com) {book}\\r\\n\\r\\n### What I’m watching\\r\\n\\r\\n- [The Jeffersons](https://en.wikipedia.org/wiki/The_Jeffersons) {display}\\r\\n- [Coronation Street](https://en.wikipedia.org/wiki/Coronation_Street) {display}\\r\\n\\r\\n### What I’m making\\r\\n\\r\\n- [Sourdough bread](https://www.feastingathome.com/sourdough-bread/) {bread-slice}\\r\\n- [Socks](https://www.yarnspirations.com/bernat-family-knit-work-socks/BRK0328-001994M.html?cgid=patterns) {socks}\\r\\n\\r\\n### What I’m enjoying\\r\\n\\r\\n- Time with friends and family {people-roof}\\r\\n- Planning for my upcoming trip {plane}\\r\\n\\r\\n---\\r\\n\\r\\n{last-updated}\\r\\n\\r\\n[Back to my omg.lol page!](https://{address}.omg.lol)\",\n\"listed\": \"1\"}"
+				},
+				"url": {
+					"raw": "https://{{base_url}}/address/:address/now",
+					"protocol": "https",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"address",
+						":address",
+						"now"
+					],
+					"variable": [
+						{
+							"key": "address",
+							"value": "foobar"
+						}
+					]
+				},
+				"description": "Update the contents of a /now page."
+			},
+			"response": [
+				{
+					"name": "Update /now Page",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"content\": \"/* This is a sample /now page — edit it and make it your own! */\\r\\n\\r\\n{profile-picture}\\r\\n\\r\\n# {address} // you can change this to your name!\\r\\n\\r\\n## My /now page\\r\\n\\r\\n--- Now ---\\r\\n\\r\\n(This is a [now page](https://nownownow.com/about), and if you have your own site, [you should make one](https://nownownow.com/about), too.)\\r\\n\\r\\n### What I’m reading\\r\\n\\r\\n- [Wuthering Heights](https://en.wikipedia.org/wiki/Wuthering_Heights) by [Emily Brontë ](https://en.wikipedia.org/wiki/Emily_Brontë) {book}\\r\\n- [Monocole](https://monocle.com) {book}\\r\\n\\r\\n### What I’m watching\\r\\n\\r\\n- [The Jeffersons](https://en.wikipedia.org/wiki/The_Jeffersons) {display}\\r\\n- [Coronation Street](https://en.wikipedia.org/wiki/Coronation_Street) {display}\\r\\n\\r\\n### What I’m making\\r\\n\\r\\n- [Sourdough bread](https://www.feastingathome.com/sourdough-bread/) {bread-slice}\\r\\n- [Socks](https://www.yarnspirations.com/bernat-family-knit-work-socks/BRK0328-001994M.html?cgid=patterns) {socks}\\r\\n\\r\\n### What I’m enjoying\\r\\n\\r\\n- Time with friends and family {people-roof}\\r\\n- Planning for my upcoming trip {plane}\\r\\n\\r\\n---\\r\\n\\r\\n{last-updated}\\r\\n\\r\\n[Back to my omg.lol page!](https://{address}.omg.lol)\",\n\"listed\": \"1\"}"
+						},
+						"url": {
+							"raw": "https://{{base_url}}/address/:address/now",
+							"protocol": "https",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"address",
+								":address",
+								"now"
+							],
+							"variable": [
+								{
+									"key": "address",
+									"value": "foobar"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 22 Jan 2023 05:12:26 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,POST,OPTIONS,DELETE,PUT,PATCH"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Authorization,Content-Type"
+						},
+						{
+							"key": "Content-Length",
+							"value": "162"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"request\": {\n        \"status_code\": 200,\n        \"success\": true\n    },\n    \"response\": {\n        \"message\": \"OK, your /now page has been updated.\"\n    }\n}"
+				}
+			]
+		}
+	]
+}
