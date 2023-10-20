@@ -1,11 +1,42 @@
-# todo
+# Todo
 
-## foo
-
-### API Features
+## API Coverage
 
 - [ ] Make a todo list of the different APIs
 
-### Documentation
+- [ ] Setup Project
+  - [ ] Checklist
+- [ ] Create coverage doc (`coverage.md`)
 
-- [ ] Make a todo list
+## Commands
+
+*TODO*
+
+## Documentation
+
+- [x] Start a todo list
+  - [ ] Finish v1 of todo list
+- [x] Add postman files
+  - [ ] Use a [gitmodule](https://git-scm.com/docs/gitmodules) to keep `/docs/api/postman/` up to date (?)
+  
+### Usage Docs
+
+- [ ] Basic Usage
+
+### GitHub Community Tools
+
+- [ ] Code of Conduct
+- [ ] Security Policy
+- [ ] Contributing
+- [ ] Funding
+
+#### [Templates](https://github.com/devspace/awesome-github-templates)
+
+- [ ] [PR Templates](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository)
+
+#### [Issue Templates](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms)
+
+- [ ] Issue config file
+- [ ] Bug report
+- [ ] Feature request
+- [ ] Support question (?)
