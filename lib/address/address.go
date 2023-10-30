@@ -7,6 +7,28 @@ import (
 	"log"
 )
 
+var (
+	err error
+	response string
+)
+
+type addressData struct {
+	Request  *myRequest  `json:"objectValue"`
+	Response *myResponse `json:"objectValue"`
+}
+
+type myRequest struct {
+	StatusCode    int  `json:"intValue"`
+	SuccessStatus bool `json:"boolValue"`
+}
+
+type myResponse struct {
+	Message       string `json:"stringValue"`
+	TargetAddress string `json:"stringValue"`
+	IsAvailable   bool   `json:"boolValue"`
+	Availability  string `json:"stringValue"`
+}
+
 // Check the availability of a given address.
 func Available(address string) (string, error) {
 	// If no address was given, return an error (with a message).
