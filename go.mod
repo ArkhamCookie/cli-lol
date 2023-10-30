@@ -1,4 +1,4 @@
-module ArkhamCookie/omglol
+module github.com/ArkhamCookie/omglol
 
 go 1.20
 
@@ -11,8 +11,6 @@ require (
 )
 
 replace (
-	ArkhamCookie/omglol => ../omg.lol // main
-
 	internal/http => ./internal/http
 
 	// libs
