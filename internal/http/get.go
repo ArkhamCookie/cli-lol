@@ -27,7 +27,7 @@ func Get(url string) (string, error) {
 		log.Fatal(err)
 	}
 
-	if (resp.StatusCode != 200) {
+	if resp.StatusCode != 200 {
 		// TODO: respond differently depending on error
 		return resp.Status, errors.New("request failed")
 	}
