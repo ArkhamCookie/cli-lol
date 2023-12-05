@@ -16,39 +16,39 @@ A command-line interface for [omg.lol](https://omg.lol)'s API.
 ### Credits
 
 - [Neaknik](https://neatnik.net)
-  \- created/runs [omg.lol](https://omg.lol)
+  — created/runs [omg.lol](https://omg.lol)
 - [Sara](https://sarajoy.dev/#sara)
-  \- created [ASCII Prami](https://sarajoy.dev/blog/short/2023-01-18-ascii-art-heart) [^1] [^2]
+  — created [ASCII Prami](https://sarajoy.dev/blog/short/2023-01-18-ascii-art-heart) [^1] [^2]
 
 ### Libraries Used
 
 - [Cobra](https://cobra.dev)
-  \- A Framework for Modern CLI Apps in Go
+  — A Framework for Modern CLI Apps in Go
 
 ---
 
 ## Other omg.lol Related Projects
 
 - [rknightuk/api](https://github.com/rknightuk/api)
-  \- rknight's [now page](https://nownownow.com/about) API
+  — rknight's [now page](https://nownownow.com/about) API
 
 ### Command Line Interfaces
 
 - [omglolcli](https://github.com/rknightuk/omglolcli)
-  \- An omg.lol CLI [written in JavaScript]
+  — An omg.lol CLI [written in JavaScript]
 - [omg-rs](https://github.com/supleed2/omg-rs)
-  \- CLI app for interacting with the omg.lol API
+  — CLI app for interacting with the omg.lol API
 
 ### API Clients
 
 - [omglol-client-go](https://github.com/ejstreet/omglol-client-go)
-  \- An API client for omg.lol written in Go
+  — An API client for omg.lol written in Go
 - [omg-py](https://github.com/tildezero/omg-py)
-  \- An api wrapper for the omg.lol api
+  — An api wrapper for the omg.lol api
 - [omg-api](https://github.com/supleed2/omg-api)
-  \- Crate for interacting with the omg.lol API
+  — Crate for interacting with the omg.lol API
 - [omglolrs](https://sr.ht/~gpo/omglolrs)
-  \-An asynchronous Rust wrapper for the omg.lol API by Gil
+  —An asynchronous Rust wrapper for the omg.lol API by Gil
 
 <!-- Footnotes -->
 
