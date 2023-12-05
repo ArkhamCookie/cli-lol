@@ -3,11 +3,10 @@ module github.com/ArkhamCookie/omglol
 go 1.20
 
 require (
-	// internal/http v0.0.0 // indirect
-	// ArkhamCookie/omglol v0.0.0
-	// omglol/profile v0.0.0
-	// omglol/address v0.0.0
-	// omglol/cmd v0.0.0
+	github.com/inconshreveable/mousetrap v1.1.0 // indirect
+	github.com/spf13/cobra v1.8.0 // indirect
+	github.com/spf13/pflag v1.0.5 // indirect
+	internal/http v0.0.0 // indirect
 )
 
 replace (
