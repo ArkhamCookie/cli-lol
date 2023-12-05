@@ -12,7 +12,7 @@ var rootCmd = &cobra.Command{
 	Short: "cli-lol is a commandline interface for omg.lol",
 	// Long: "cli-lol is an open-source commandline interface for omg.lol built with Golang.",
 	Run: func(cmd *cobra.Command, args []string) {
-		// Do Stuff Here
+		fmt.Println("cli-lol")
 	},
 }
 
