@@ -8,11 +8,10 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use: "lol",
+	Use:   "lol",
 	Short: "cli-lol is a commandline interface for omg.lol",
 	Long: `cli-lol is an open-source commandline interface for https://omg.lol built with Golang.
-		You can find the source code at https://git.theuntitledproject.dev/cli-lol,
-		and the documentation at https://docs.theuntitledproject.dev/cli-lol.`,
+You can find the source code at https://git.theuntitledproject.dev/cli-lol, and the documentation at https://docs.theuntitledproject.dev/cli-lol.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		// Do Stuff Here
 	},
