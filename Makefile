@@ -51,7 +51,7 @@ lint-reportcard: ## Use goreportcard-cli on your project
 help: ## Show this help.
 	@echo ''
 	@echo 'Usage:'
-	@echo '  ${YELLOW}make${RESET} ${GREEN}<target>${RESET}'
+	@echo '  ${YELLOW}make${RESET} ${GREEN}<command>${RESET}'
 	@echo ''
 	@echo 'Targets:'
 	@awk 'BEGIN {FS = ":.*?## "} { \
