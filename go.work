@@ -6,4 +6,5 @@ use (
 	./internal/http
 	./lib/address
 	./lib/profile
+	./lib/statuslog
 )
