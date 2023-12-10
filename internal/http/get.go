@@ -18,6 +18,8 @@ func Get(url string) (string, error) {
 		log.Fatalln("could not create GET request:", err)
 	}
 
+	request.Header.Set("Content-Type", "application/json")
+
 	resp, err := http.DefaultClient.Do(request)
 
 	if err != nil {
