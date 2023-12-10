@@ -8,7 +8,7 @@ import (
 )
 
 func logo() {
-		fmt.Println(`
+	fmt.Println(`
       ____     ____
   ,-""    "-.-"    ""-,
  /  __  .  . .  .  __  \
@@ -20,7 +20,6 @@ func logo() {
    sjw   "-,_,-"
    `)
 }
-
 
 var Verbose bool
 
