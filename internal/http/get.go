@@ -13,7 +13,12 @@ func Get(url string) (string, error) {
 		return "", errors.New("no address given")
 	}
 
-	resp, err := http.Get(url)
+	request, err := http.NewRequest(http.MethodGet, url, nil)
+	if err != nil {
+		log.Fatalln("could not create GET request:", err)
+	}
+
+	resp, err := http.DefaultClient.Do(request)
 
 	if err != nil {
 		log.Fatal(err)
