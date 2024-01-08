@@ -10,7 +10,7 @@ func listCmd(address string) {
 	if address != "" {
 		statuslog.List(address)
 	} else {
-		println("Usage:")
+		println("Usage: lol status l[ist] <address>")
 	}
 }
 
