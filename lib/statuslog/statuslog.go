@@ -1,28 +1,35 @@
 package statuslog
 
 import (
+	"encoding/json"
 	"errors"
 	"fmt"
-	"internal/http"
+	"io"
+	"log"
+	"net/http"
 )
 
 /** Types */
-type Status struct {
-	Id int `json:"id"`
-	Address string `json:"address"`
-	Created int `json:"created"`
-	Emoji string `json:"emoji"`
-	Content string `json:"content"`
-}
-
 type StatuslogData struct {
-	http.RequestData
-
-	Message string
-	Statuses []Status
+	Request struct {
+		StatusCode int  `json:"status_code"`
+		Success    bool `json:"success"`
+	} `json:"request"`
+	Response struct {
+		Message  string `json:"message"`
+		Statuses []struct {
+			ID           string `json:"id"`
+			Address      string `json:"address"`
+			Created      string `json:"created"`
+			RelativeTime string `json:"relative_time"`
+			Emoji        string `json:"emoji"`
+			Content      string `json:"content"`
+			ExternalURL  string `json:"external_url"`
+		} `json:"statuses"`
+	} `json:"response"`
 }
 
-func Retrieve(address, status string) (*Status, error) {
+func Retrieve(address, status string) (*StatuslogData, error) {
 	if address == "" {
 		return nil, errors.New("no address given")
 	}
@@ -33,13 +40,27 @@ func Retrieve(address, status string) (*Status, error) {
 	return nil, nil
 }
 
-func List(address string) (*Status, error) {
+func List(address string) (*StatuslogData, error) {
 	if address == "" {
 		return nil, errors.New("no address given")
 	}
 
 	target := fmt.Sprintf("https://api.omg.lol/address/%s/statuses/", address)
-	fmt.Println(http.Get(target))
+	resp, err := http.Get(target)
+	if err != nil {
+		log.Fatalln("could not create GET request:", err)
+	}
+	defer resp.Body.Close()
+	body, _ := io.ReadAll(resp.Body)
 
-	return nil, nil
+	var result StatuslogData
+	if err := json.Unmarshal(body, &result); err != nil {
+		log.Fatalln("could not unmarshal JSON")
+	}
+
+	if result.Request.StatusCode != 200 {
+		errorMsg := fmt.Sprintf("status code: %d", result.Request.StatusCode)
+		return nil, errors.New(errorMsg)
+	}
+	return &result, nil
 }
