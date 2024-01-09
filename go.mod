@@ -15,6 +15,7 @@ require (
 require (
 	internal/http v0.0.0 // indirect
 	omglol/address v0.0.0 //indirect
+	omglol/statuslog v0.0.0 //indirect
 )
 
 replace (
@@ -23,9 +24,8 @@ replace (
 	// libs
 	omglol/address => ./lib/address
 	omglol/profile => ./lib/profile
+	omglol/statuslog => ./lib/statuslog
 
 	// commands
 	omglol/cmd => ./cmd
 )
-
-// require ArkhamCookie/omg.lol v1.0.0
