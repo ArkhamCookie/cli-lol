@@ -41,10 +41,12 @@ func viewCmd(address, status string) {
 		return
 	}
 
-	fmt.Println(result.Response.Message)
-	fmt.Println() // To remove error about no new line with `fmt.Println()`
-	fmt.Println(result.Response.Status.Emoji, result.Response.Status.RelativeTime)
-	fmt.Println(result.Response.Status.Content)
+	rendered := fmt.Sprintf("%s %s\n\n%s", result.Response.Status.Emoji, result.Response.Status.RelativeTime, result.Response.Status.Content)
+	out, err := glamour.Render(rendered, "dark")
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Print(out)
 	// fmt.Println(result.Response.Status.ExternalURL) // Planned verbose response
 }
 
