@@ -122,7 +122,7 @@ func List(address string) (*StatuslogList, error) {
 	return &result, nil
 }
 
-func Latest() (*StatuslogLatest, error){
+func Latest() (*StatuslogLatest, error) {
 	resp, err := http.Get("https://api.omg.lol/statuslog/latest")
 	if err != nil {
 		errorMsg := fmt.Sprintf("could not create GET request: %s", err)
