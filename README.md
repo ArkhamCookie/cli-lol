@@ -2,7 +2,12 @@
 
 A command-line interface for [omg.lol](https://omg.lol)'s API.
 
-> **Warning**
+## Here be dragons!
+
+This tool and its libraries are very early in development.
+It doesn't even cover all of omg.lol's API at the moment.
+
+> [!WARNING]
 > The omg.lol API is still in development, and endpoints are subject to change. This may cause the client to break unexpectedly.
 
 ## License
