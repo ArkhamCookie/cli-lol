@@ -29,7 +29,6 @@ require (
 	github.com/yuin/goldmark-emoji v1.0.1 // indirect
 	golang.org/x/net v0.0.0-20221002022538-bcab6841153b // indirect
 	golang.org/x/sys v0.0.0-20220811171246-fbc7d0a398ab // indirect
-	internal/http v0.0.0 // indirect
 	omglol/address v0.0.0 //indirect
 	omglol/statuslog v0.0.0 //indirect
 )
