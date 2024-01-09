@@ -5,5 +5,6 @@ use (
 	./cmd
 	./lib/address
 	./lib/profile
+	./lib/purl
 	./lib/statuslog
 )

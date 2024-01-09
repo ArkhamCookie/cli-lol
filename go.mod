@@ -6,6 +6,7 @@ replace (
 	omglol/address => ./lib/address
 	omglol/cmd => ./cmd
 	omglol/profile => ./lib/profile
+	omglol/purl => ./lib/purl
 	omglol/statuslog => ./lib/statuslog
 )
 
