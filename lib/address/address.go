@@ -9,7 +9,7 @@ import (
 	"net/http"
 )
 
-type AddressExpirationData struct {
+type addressExpirationData struct {
 	Request struct {
 		StatusCode int  `json:"status_code"`
 		Success    bool `json:"success"`
@@ -20,7 +20,7 @@ type AddressExpirationData struct {
 	} `json:"response"`
 }
 
-type AddressAvaiableData struct {
+type addressAvaiableData struct {
 	Request struct {
 		StatusCode int  `json:"status_code"`
 		Success    bool `json:"success"`
@@ -51,7 +51,7 @@ func Available(address string) (bool, error) {
 		return false, err
 	}
 
-	var result AddressAvaiableData
+	var result addressAvaiableData
 	if err := json.Unmarshal(body, &result); err != nil {
 		return false, errors.New("could not unmarshal JSON")
 	}
@@ -65,7 +65,7 @@ func Available(address string) (bool, error) {
 }
 
 // Get the expiration date for an address
-func Expiration(address string) (*AddressExpirationData, error) {
+func Expiration(address string) (*addressExpirationData, error) {
 	// If no address was given, return an error (with a message).
 	if address == "" {
 		return nil, errors.New("no address given")
@@ -82,7 +82,7 @@ func Expiration(address string) (*AddressExpirationData, error) {
 		return nil, err
 	}
 
-	var result AddressExpirationData
+	var result addressExpirationData
 	if err := json.Unmarshal(body, &result); err != nil {
 		return nil, errors.New("could not unmarshal JSON")
 	}
