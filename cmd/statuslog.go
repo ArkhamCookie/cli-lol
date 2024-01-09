@@ -60,7 +60,10 @@ func bioCmd(address string) {
 		return
 	}
 
-	out, _ := glamour.Render(result.Response.Bio, "dark")
+	out, err := glamour.Render(result.Response.Bio, "dark")
+	if err != nil {
+		fmt.Println(err)
+	}
 	fmt.Print(out)
 }
 
