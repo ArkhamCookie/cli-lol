@@ -8,7 +8,14 @@ import (
 
 func listCmd(address string) {
 	if address != "" {
-		statuslog.List(address)
+		result, err := statuslog.List(address)
+		if err != nil {
+			println(err)
+			return
+		}
+		// Print statuses
+		println(result.Response.Message)
+		println(result.Response.Statuses)
 	} else {
 		println("Usage: lol status l[ist] <address>")
 	}
