@@ -29,6 +29,8 @@ var statuslogCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		switch args[0] {
 		case "l":
+			fallthrough
+		case "list":
 			if len(args) > 1 {
 				listCmd(args[1])
 			} else {
