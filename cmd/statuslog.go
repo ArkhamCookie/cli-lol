@@ -16,6 +16,7 @@ func listCmd(address string) {
 		println(err)
 		return
 	}
+
 	// Print statuses
 	println(result.Response.Message)
 	println(result.Response.Statuses)
