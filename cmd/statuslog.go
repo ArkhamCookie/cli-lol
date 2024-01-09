@@ -18,7 +18,6 @@ func listCmd(address string) {
 		return
 	}
 
-	// Print statuses
 	println(result.Response.Message)
 	println(result.Response.Statuses)
 }
