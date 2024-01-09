@@ -1,6 +1,8 @@
 package cmd
 
 import (
+	"fmt"
+
 	"omglol/statuslog"
 
 	"github.com/spf13/cobra"
@@ -8,40 +10,41 @@ import (
 
 func listCmd(address string) {
 	if address == "" {
-		println("Usage: lol status l[ist] <address> [flags]")
+		fmt.Println("Usage: lol status l[ist] <address> [flags]")
 		return
 	}
 
 	result, err := statuslog.List(address)
 	if err != nil {
-		println(err)
+		fmt.Println(err)
 		return
 	}
 
-	println(result.Response.Message)
-	println(result.Response.Statuses)
+	fmt.Println(result.Response.Message)
+	fmt.Println(result.Response.Statuses)
 }
 
 func viewCmd(address, status string) {
 	if address == "" {
-		println("Usage: lol status v[iew] <address> <status-id> [flags]")
+		fmt.Println("Usage: lol status v[iew] <address> <status-id> [flags]")
 		return
 	}
 	if status == "" {
-		println("Usage: lol status v[iew] <address> <status-id> [flags]")
+		fmt.Println("Usage: lol status v[iew] <address> <status-id> [flags]")
 		return
 	}
 
 	result, err := statuslog.Retrieve(address, status)
 	if err != nil {
-		println(err)
+		fmt.Println(err)
 		return
 	}
 
-	println(result.Response.Message, "\n")
-	println(result.Response.Status.Emoji, result.Response.Status.RelativeTime)
-	println(result.Response.Status.Content)
-	// println(result.Response.Status.ExternalURL) // Planned verbose response
+	fmt.Println(result.Response.Message)
+	fmt.Println() // To remove error about no new line with `fmt.Println()`
+	fmt.Println(result.Response.Status.Emoji, result.Response.Status.RelativeTime)
+	fmt.Println(result.Response.Status.Content)
+	// fmt.Println(result.Response.Status.ExternalURL) // Planned verbose response
 }
 
 var statuslogCmd = &cobra.Command{

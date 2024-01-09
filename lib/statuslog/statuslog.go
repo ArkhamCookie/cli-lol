@@ -5,7 +5,6 @@ import (
 	"errors"
 	"fmt"
 	"io"
-	"log"
 	"net/http"
 )
 
@@ -59,14 +58,15 @@ func Retrieve(address, status string) (*StatuslogRetrieve, error) {
 	target := fmt.Sprintf("https://api.omg.lol/address/%s/statuses/%s", address, status)
 	resp, err := http.Get(target)
 	if err != nil {
-		log.Fatalln("could not create GET request:", err)
+		errorMsg := fmt.Sprintf("could not create GET request: %s", err)
+		return nil, errors.New(errorMsg)
 	}
 	defer resp.Body.Close()
 	body, _ := io.ReadAll(resp.Body)
 
 	var result StatuslogRetrieve
 	if err := json.Unmarshal(body, &result); err != nil {
-		log.Fatalln("could not unmarshal JSON")
+		return nil, errors.New("could not unmarshal JSON")
 	}
 
 	if result.Request.StatusCode != 200 {
@@ -85,14 +85,15 @@ func List(address string) (*StatuslogList, error) {
 	target := fmt.Sprintf("https://api.omg.lol/address/%s/statuses/", address)
 	resp, err := http.Get(target)
 	if err != nil {
-		log.Fatalln("could not create GET request:", err)
+		errorMsg := fmt.Sprintf("could not create GET request: %s", err)
+		return nil, errors.New(errorMsg)
 	}
 	defer resp.Body.Close()
 	body, _ := io.ReadAll(resp.Body)
 
 	var result StatuslogList
 	if err := json.Unmarshal(body, &result); err != nil {
-		log.Fatalln("could not unmarshal JSON")
+		return nil, errors.New("could not unmarshal JSON")
 	}
 
 	if result.Request.StatusCode != 200 {
