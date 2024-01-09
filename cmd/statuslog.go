@@ -5,6 +5,7 @@ import (
 
 	"omglol/statuslog"
 
+	"github.com/charmbracelet/glamour"
 	"github.com/spf13/cobra"
 )
 
@@ -59,8 +60,8 @@ func bioCmd(address string) {
 		return
 	}
 
-	fmt.Println(result.Response.Message)
-	fmt.Println(result.Response.Bio)
+	out, _ := glamour.Render(result.Response.Bio, "dark")
+	fmt.Print(out)
 }
 
 var statuslogCmd = &cobra.Command{
