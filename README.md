@@ -24,6 +24,8 @@ A command-line interface for [omg.lol](https://omg.lol)'s API.
 
 - [Cobra](https://cobra.dev)
   — A Framework for Modern CLI Apps in Go
+- [Glamour](https://github.com/charmbracelet/glamour)
+  — Stylesheet-based markdown rendering for your CLI apps
 
 <!-- Footnotes -->
 
