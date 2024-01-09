@@ -15,6 +15,7 @@ require omglol/cmd v0.0.0
 require (
 	omglol/address v0.0.0 // indirect
 	omglol/statuslog v0.0.0 // indirect
+	omglol/purl v0.0.0 // indirect
 )
 
 require (
