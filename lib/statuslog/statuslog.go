@@ -10,7 +10,7 @@ import (
 )
 
 /** Types */
-type StatuslogData struct {
+type StatuslogList struct {
 	Request struct {
 		StatusCode int  `json:"status_code"`
 		Success    bool `json:"success"`
@@ -40,7 +40,7 @@ func Retrieve(address, status string) (*StatuslogData, error) {
 	return nil, nil
 }
 
-func List(address string) (*StatuslogData, error) {
+func List(address string) (*StatuslogList, error) {
 	if address == "" {
 		return nil, errors.New("no address given")
 	}
@@ -53,7 +53,7 @@ func List(address string) (*StatuslogData, error) {
 	defer resp.Body.Close()
 	body, _ := io.ReadAll(resp.Body)
 
-	var result StatuslogData
+	var result StatuslogList
 	if err := json.Unmarshal(body, &result); err != nil {
 		log.Fatalln("could not unmarshal JSON")
 	}
