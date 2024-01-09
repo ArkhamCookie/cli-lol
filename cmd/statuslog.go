@@ -11,6 +11,7 @@ func listCmd(address string) {
 		println("Usage: lol status l[ist] <address>")
 		return
 	}
+
 	result, err := statuslog.List(address)
 	if err != nil {
 		println(err)
