@@ -81,7 +81,10 @@ func Retrieve(address, status string) (*StatuslogRetrieve, error) {
 		return nil, errors.New(errorMsg)
 	}
 	defer resp.Body.Close()
-	body, _ := io.ReadAll(resp.Body)
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return nil, err
+	}
 
 	var result StatuslogRetrieve
 	if err := json.Unmarshal(body, &result); err != nil {
@@ -108,7 +111,10 @@ func List(address string) (*StatuslogList, error) {
 		return nil, errors.New(errorMsg)
 	}
 	defer resp.Body.Close()
-	body, _ := io.ReadAll(resp.Body)
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return nil, err
+	}
 
 	var result StatuslogList
 	if err := json.Unmarshal(body, &result); err != nil {
@@ -129,7 +135,10 @@ func Latest() (*StatuslogLatest, error) {
 		return nil, errors.New(errorMsg)
 	}
 	defer resp.Body.Close()
-	body, _ := io.ReadAll(resp.Body)
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return nil, err
+	}
 
 	var result StatuslogLatest
 	if err := json.Unmarshal(body, &result); err != nil {
