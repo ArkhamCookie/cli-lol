@@ -8,7 +8,7 @@ import (
 
 func listCmd(address string) {
 	if address == "" {
-		println("Usage: lol status l[ist] <address>")
+		println("Usage: lol status l[ist] <address> [flags]")
 		return
 	}
 
@@ -24,11 +24,11 @@ func listCmd(address string) {
 
 func viewCmd(address, status string) {
 	if address == "" {
-		println("Usage: lol status v[iew] <address> <status-id>")
+		println("Usage: lol status v[iew] <address> <status-id> [flags]")
 		return
 	}
 	if status == "" {
-		println("Usage: lol status v[iew] <address> <status-id>")
+		println("Usage: lol status v[iew] <address> <status-id> [flags]")
 		return
 	}
 
