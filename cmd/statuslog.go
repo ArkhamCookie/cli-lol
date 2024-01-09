@@ -47,6 +47,22 @@ func viewCmd(address, status string) {
 	// fmt.Println(result.Response.Status.ExternalURL) // Planned verbose response
 }
 
+func bioCmd(address string) {
+	if address == "" {
+		fmt.Println("Usage lol status b[io] <address> [flags]")
+		return
+	}
+
+	result, err := statuslog.BioView(address)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	fmt.Println(result.Response.Message)
+	fmt.Println(result.Response.Bio)
+}
+
 var statuslogCmd = &cobra.Command{
 	Use:   "status <command> [flags]",
 	Short: "View or manage statuses",
@@ -69,6 +85,14 @@ var statuslogCmd = &cobra.Command{
 				viewCmd(args[1], args[2])
 			} else {
 				viewCmd("", "")
+			}
+		case "b":
+			fallthrough
+		case "bio":
+			if len(args) > 1 {
+				bioCmd(args[1])
+			} else {
+				bioCmd("")
 			}
 		}
 	},
