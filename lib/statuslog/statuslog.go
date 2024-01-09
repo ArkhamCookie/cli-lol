@@ -9,7 +9,7 @@ import (
 )
 
 /** Types */
-type StatuslogList struct {
+type statuslogListData struct {
 	Request struct {
 		StatusCode int  `json:"status_code"`
 		Success    bool `json:"success"`
@@ -28,7 +28,7 @@ type StatuslogList struct {
 	} `json:"response"`
 }
 
-type StatuslogRetrieve struct {
+type statuslogRetrieveData struct {
 	Request struct {
 		StatusCode int  `json:"status_code"`
 		Success    bool `json:"success"`
@@ -47,7 +47,7 @@ type StatuslogRetrieve struct {
 	} `json:"response"`
 }
 
-type StatuslogBio struct {
+type statuslogBioData struct {
 	Request struct {
 		StatusCode int  `json:"status_code"`
 		Success    bool `json:"success"`
@@ -60,7 +60,7 @@ type StatuslogBio struct {
 	} `json:"response"`
 }
 
-type StatuslogLatest struct {
+type statuslogLatestData struct {
 	Request struct {
 		StatusCode int  `json:"status_code"`
 		Success    bool `json:"success"`
@@ -79,7 +79,7 @@ type StatuslogLatest struct {
 	} `json:"response"`
 }
 
-func Retrieve(address, status string) (*StatuslogRetrieve, error) {
+func Retrieve(address, status string) (*statuslogRetrieveData, error) {
 	if address == "" {
 		return nil, errors.New("no address given")
 	}
@@ -99,7 +99,7 @@ func Retrieve(address, status string) (*StatuslogRetrieve, error) {
 		return nil, err
 	}
 
-	var result StatuslogRetrieve
+	var result statuslogRetrieveData
 	if err := json.Unmarshal(body, &result); err != nil {
 		return nil, errors.New("could not unmarshal JSON")
 	}
@@ -112,7 +112,7 @@ func Retrieve(address, status string) (*StatuslogRetrieve, error) {
 	return &result, nil
 }
 
-func List(address string) (*StatuslogList, error) {
+func List(address string) (*statuslogListData, error) {
 	if address == "" {
 		return nil, errors.New("no address given")
 	}
@@ -129,7 +129,7 @@ func List(address string) (*StatuslogList, error) {
 		return nil, err
 	}
 
-	var result StatuslogList
+	var result statuslogListData
 	if err := json.Unmarshal(body, &result); err != nil {
 		return nil, errors.New("could not unmarshal JSON")
 	}
@@ -141,7 +141,7 @@ func List(address string) (*StatuslogList, error) {
 	return &result, nil
 }
 
-func BioView(address string) (*StatuslogBio, error) {
+func BioView(address string) (*statuslogBioData, error) {
 	if address == "" {
 		return nil, errors.New("no address given")
 	}
@@ -158,7 +158,7 @@ func BioView(address string) (*StatuslogBio, error) {
 		return nil, err
 	}
 
-	var result StatuslogBio
+	var result statuslogBioData
 	if err := json.Unmarshal(body, &result); err != nil {
 		return nil, errors.New("could not unmarshal JSON")
 	}
@@ -171,7 +171,7 @@ func BioView(address string) (*StatuslogBio, error) {
 	return &result, nil
 }
 
-func Latest() (*StatuslogLatest, error) {
+func Latest() (*statuslogLatestData, error) {
 	resp, err := http.Get("https://api.omg.lol/statuslog/latest")
 	if err != nil {
 		errorMsg := fmt.Sprintf("could not create GET request: %s", err)
@@ -183,7 +183,7 @@ func Latest() (*StatuslogLatest, error) {
 		return nil, err
 	}
 
-	var result StatuslogLatest
+	var result statuslogLatestData
 	if err := json.Unmarshal(body, &result); err != nil {
 		return nil, errors.New("could not unmarshal JSON")
 	}
