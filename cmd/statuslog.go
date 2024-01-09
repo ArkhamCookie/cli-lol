@@ -9,7 +9,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-func listCmd(address string) {
+func statuslogListCmd(address string) {
 	if address == "" {
 		fmt.Println("Usage: lol status l[ist] <address> [flags]")
 		return
@@ -25,7 +25,7 @@ func listCmd(address string) {
 	fmt.Println(result.Response.Statuses)
 }
 
-func viewCmd(address, status string) {
+func statuslogViewCmd(address, status string) {
 	if address == "" {
 		fmt.Println("Usage: lol status v[iew] <address> <status-id> [flags]")
 		return
@@ -50,7 +50,7 @@ func viewCmd(address, status string) {
 	// fmt.Println(result.Response.Status.ExternalURL) // Planned verbose response
 }
 
-func bioCmd(address string) {
+func StatuslogBioCmd(address string) {
 	if address == "" {
 		fmt.Println("Usage lol status b[io] <address> [flags]")
 		return
@@ -80,25 +80,25 @@ var statuslogCmd = &cobra.Command{
 			fallthrough
 		case "list":
 			if len(args) > 1 {
-				listCmd(args[1])
+				statuslogListCmd(args[1])
 			} else {
-				listCmd("")
+				statuslogListCmd("")
 			}
 		case "v":
 			fallthrough
 		case "view":
 			if len(args) >= 3 {
-				viewCmd(args[1], args[2])
+				statuslogViewCmd(args[1], args[2])
 			} else {
-				viewCmd("", "")
+				statuslogViewCmd("", "")
 			}
 		case "b":
 			fallthrough
 		case "bio":
 			if len(args) > 1 {
-				bioCmd(args[1])
+				StatuslogBioCmd(args[1])
 			} else {
-				bioCmd("")
+				StatuslogBioCmd("")
 			}
 		}
 	},
