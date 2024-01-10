@@ -32,7 +32,7 @@ func List(address string) (*purlListData, error) {
 	target := fmt.Sprintf("https://api.omg.lol/address/%s/purls", address)
 	resp, err := http.Get(target)
 	if err != nil {
-		log.Fatal(err)
+		return nil, err
 	}
 	defer resp.Body.Close()
 	body, err := io.ReadAll(resp.Body)
