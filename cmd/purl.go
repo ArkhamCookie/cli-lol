@@ -7,6 +7,27 @@ import (
 	"github.com/spf13/cobra"
 )
 
+func purlRetrieveCmd(address, targetPurl string) {
+	if address == "" {
+		fmt.Println("Usage: lol purl g[et] <address> <purl> [flags]")
+		return
+	}
+	if targetPurl == "" {
+		fmt.Println("Usage: lol purl g[et] <address> <purl> [flags]")
+		return
+	}
+
+	result, err := purl.Retrieve(address, targetPurl)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	// fmt.Println(result.Response.Purl.Name) // Planned verbose response
+	fmt.Println(result.Response.Purl.URL)
+	// fmt.Println("Counter:", result.Response.Purl.Counter) // Planned verbose response
+}
+
 func purlListCmd(address string) {
 	if address == "" {
 		fmt.Println("Usage: lol purl l[ist] <address> [flags]")
@@ -36,6 +57,14 @@ var purlCmd = &cobra.Command{
 				purlListCmd(args[1])
 			} else {
 				purlListCmd("")
+			}
+		case "g":
+			fallthrough
+		case "get":
+			if len(args) >= 3 {
+				purlRetrieveCmd(args[1], args[2])
+			} else {
+				purlRetrieveCmd("", "")
 			}
 		}
 	},
