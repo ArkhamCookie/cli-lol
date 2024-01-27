@@ -42,6 +42,20 @@ func purlListCmd(address string) {
 
 	fmt.Println(result.Response.Message)
 	fmt.Println(result.Response.Purls)
+
+	for _, purl := range result.Response.Purls {
+		var x struct {
+			Name string
+			URL string
+			Counter int
+		}
+
+		x.Name = purl.Name
+		x.URL = purl.URL
+		x.Counter = purl.Counter
+
+		fmt.Printf("https://purl.%s.omg.lol/%s = %s\n", address, x.Name, x.URL)
+	}
 }
 
 var purlCmd = &cobra.Command{
