@@ -1,6 +1,11 @@
 # Arkham's golang .gitignore
 # https://arkhamcookie.com
 
+## secrets
+.env*
+!.env.example
+!test.env
+
 ## golang
 *.test
 *.sum

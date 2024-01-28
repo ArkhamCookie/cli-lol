@@ -3,7 +3,9 @@ go 1.20
 use (
 	.
 	./cmd
+	./internal/env
 	./lib/address
 	./lib/profile
+	./lib/purl
 	./lib/statuslog
 )
