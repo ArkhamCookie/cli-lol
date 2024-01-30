@@ -41,7 +41,6 @@ func purlListCmd(address string) {
 	}
 
 	fmt.Println(result.Response.Message)
-	fmt.Println(result.Response.Purls)
 
 	for _, purl := range result.Response.Purls {
 		var x struct {
